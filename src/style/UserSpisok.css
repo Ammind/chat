@@ -1,0 +1,41 @@
+ul {
+    list-style: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+li {
+    background-color: #242936;
+    padding: 10px 10px 5px 5px;
+
+    height: 60px;
+    /* margin-top: 10px; */
+}
+
+ul :hover {
+    background-color: #313642;
+    
+}
+
+.user.selected {
+    background-color: #535c70;
+}
+
+img {
+    height: 95%;
+    border-radius: 50%;
+    width: 65px;
+}
+
+@media (max-width: 768px) {
+
+    img {
+    height: 95%;
+    width: 65px;
+}
+
+html, body {
+    overflow: hidden; 
+  }
+
+}

@@ -1,0 +1,174 @@
+.СhatPage {
+    background-color: #1F2430;
+    display: flex;
+    
+}
+
+.СhatPageContainer {
+    margin: 0 auto;
+    background-color: #242936;
+    min-height: 956px;
+    width: 1200px;
+}
+
+.UserSelected {
+    display: flex;
+}
+
+p {
+    color: aliceblue;
+}
+
+.СhatPageUserSpisok {
+  width: 30%;
+}
+
+.СhatPageUserSpisok input {
+  width: 100%;
+  height: 3vh;
+  background-color: #242936;
+  color: aliceblue;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding: 1rem;
+  font-size: 16px;
+
+}
+
+.Okna {
+    display: flex;
+
+}
+
+.OknaChat {
+    height: 95vh;
+    width: 600px;
+    background-color: #1F2430;
+}
+
+button {
+  background: #4f5b93;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  /* margin: 10px; */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+  }
+
+  .СhatPage {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+   overflow: hidden; 
+}
+
+
+  .СhatPageContainer {
+    display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+ width: 100%;
+
+  overflow: hidden;
+  }
+
+  .Okna {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+
+
+  .СhatPageUserSpisok {
+
+    width: 300%;
+    display: block;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+.OknaChat {
+  width: 100%;
+  /* height: 80%; */
+  flex: 1; /* занимает всё доступное пространство */
+  display: flex;
+  flex-direction: column;
+}
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+    .СhatPageUserSpisok input {
+  background-color: #1F2430;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.СhatPage {
+  height: 100%;
+  max-width: 768px;
+  display: flex;
+}
+
+.СhatPageContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  height: 100dvh;
+  min-height: 400px;
+}
+
+.Okna {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+}
+
