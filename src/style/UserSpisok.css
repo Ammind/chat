@@ -21,9 +21,9 @@ ul :hover {
 }
 
 img {
-    height: 95%;
+    height: 60px;
     border-radius: 50%;
-    width: 65px;
+    width: 60px;
 }
 
 @media (max-width: 768px) {
