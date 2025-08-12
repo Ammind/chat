@@ -7,12 +7,10 @@ import { UserProvider } from './components/UserContext';
 function App() {
   return (
     <UserProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<UserRegister />} />
-          <Route path="/chat" element={<ChatPage />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<UserRegister />} />
+        <Route path="/chat" element={<ChatPage />} />
+      </Routes>
     </UserProvider>
   );
 }
