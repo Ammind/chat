@@ -16,7 +16,7 @@ const chatRef = useRef(null);
         (msg.from === activeUser.login && msg.to === user.login)
     )
 
-// При первом рендере — скролл в самый низ
+
   useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
@@ -54,7 +54,6 @@ useEffect(() => {
       style={{
         height: "400px",
         overflowY: "auto",
-        // border: "1px solid #ccc"
       }}
       >
       {filteredMessages.map((msg, index) => (
@@ -65,7 +64,6 @@ useEffect(() => {
           {msg.text}
         </p>
       ))}
-      {/* <div ref={bottomRef} /> */}
     </div>
 
     <div className="poleVvoda">

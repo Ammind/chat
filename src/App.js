@@ -1,18 +1,29 @@
 import './style/App.css';
-import {Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import ChatPage from "./pages/ChatPage";
 import UserRegister from './components/UserRegister';
-import { UserProvider } from './components/UserContext';
+import { UserProvider, useUser } from './components/UserContext';
+
+function AppRoutes() {
+  const { user } = useUser();
+
+  return (
+    <Routes>
+      <Route path="/" element={user ? <Navigate to="/chat" /> : <UserRegister />} />
+      <Route path="/chat" element={user ? <ChatPage /> : <Navigate to="/" />} />
+    </Routes>
+  );
+}
 
 function App() {
   return (
     <UserProvider>
-      <Routes>
-        <Route path="/" element={<UserRegister />} />
-        <Route path="/chat" element={<ChatPage />} />
-      </Routes>
+      <Router>
+        <AppRoutes />
+      </Router>
     </UserProvider>
   );
 }
 
 export default App;
+

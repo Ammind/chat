@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-// import UserSelected from '../components/UserSelected'
 import UserSpisok from '../components/UserSpisok'
 import '../style/ChatPage.css'
 import ChatWindow from './ChatWindow'
-// import UserRegister from '../components/UserRegister'
 import { useContext } from 'react'
 import { UserContext } from '../components/UserContext';
 
@@ -23,14 +21,12 @@ const СhatPage = () => {
 
 
   const [allUsers, setAllUsers] = useState([])
-  // const [user, setUser] = useState(null)
   const [activeUser, setActiveUser] = useState(null)
   const [error, setError] = useState("");
   const [text, setText] = useState('')
   const [messages, setMessages] = useState([])
   const [form, setForm] = useState(message_form)
   const [resultPoisk, setResultPoisk] = useState([])
-  // const [showChatOnly, setShowChatOnly] = useState(false);
   const { userRegister, user, setUser, showChatOnly,  } = useContext(UserContext);
 
 
@@ -90,9 +86,9 @@ const СhatPage = () => {
   }
 
   
-  const interval = setInterval(fetchMessages, 1000); // обновлять каждые 2 сек
+  const interval = setInterval(fetchMessages, 1000); 
 
-  return () => clearInterval(interval); // очистить при выходе
+  return () => clearInterval(interval); 
   },[])
 
 
@@ -117,25 +113,6 @@ const СhatPage = () => {
       })
   }, [setAllUsers])
 
-
-
-  // const userRegister = (formRegister) => {
-  //   fetch(API_allUsers, {
-  //     method:'POST',
-  //     headers:{'Content-type':'application/json'},
-  //     body: JSON.stringify(formRegister)
-  //   })
-  //   .then ((res) => {
-  //     if (!res.ok) throw new Error('Error')
-  //       return res.json()
-  //   })
-  //   .then(data => {
-  //     setAllUsers(prev => [...prev, data])
-  //   })
-  //   .catch((err) => {
-  //       setError(err.message);
-  //   })
-  // }
 
   const poisk = (e) => {
     const value = e.target.value.toLowerCase()
